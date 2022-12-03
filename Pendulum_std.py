@@ -68,7 +68,6 @@ for i, xi in enumerate(xs):
     label = 'During optimization' if i == vars['opt_steps'] // 2 else None
     plt.plot(t, pend_height((xi)), alpha=0.3, color=plt.cm.viridis(1 - i / (len(xs) - 1)), label=label)
 # Conversion to (one) cartesian coordinate for qualitative analysis
-y = pend_height(x)
 plt.plot(t, pend_height(x), 'b.-', label='Final (optimized) path')
 plt.plot(t[[0, -1]], pend_height(x0.data[[0, -1]]), 'b+', markersize=15, label= "Points held constant")
 plt.ylim(-.25, 2.25)
